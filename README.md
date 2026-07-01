@@ -1,0 +1,122 @@
+# Azure Enterprise Kubernetes Platform
+
+End-to-end enterprise infrastructure on Microsoft Azure, from identity and networking to AKS, containers, CI/CD, monitoring, and application deployment.
+
+This project is designed as a portfolio-grade Azure lab that can be built on a Free or Student subscription with careful cost control. The documentation starts with manual implementation for learning, then introduces automation with scripts and Terraform.
+
+## Project Goals
+
+- Build a realistic Azure enterprise platform from an empty subscription.
+- Practice Azure administration, identity, networking, containers, and Kubernetes.
+- Deploy workloads through Azure Container Registry and Azure Kubernetes Service.
+- Document every decision, command, verification step, and troubleshooting note.
+- Produce a GitHub repository suitable for a cloud or DevOps portfolio.
+
+## Architecture Scope
+
+The target platform includes:
+
+- Azure resource organization and naming standards
+- Virtual network, subnets, NSGs, and private endpoints
+- Windows Server Active Directory lab VM
+- Microsoft Entra ID and optional hybrid identity notes
+- Azure Key Vault for secrets
+- Docker and Azure Container Registry
+- Azure Kubernetes Service
+- Kubernetes namespaces, deployments, services, ingress, and storage
+- PostgreSQL and Odoo workload path
+- Azure DevOps CI/CD pipeline
+- Azure Monitor, Log Analytics, and cost controls
+
+## Free Subscription Design
+
+The lab is intentionally staged to avoid unnecessary cost:
+
+- Start with one small Windows VM only when identity practice is needed.
+- Prefer Basic or free tiers where available.
+- Keep AKS node count low and stop/delete expensive resources after each session.
+- Use screenshot placeholders and documentation even when a service cannot remain running.
+- Track cost after every phase.
+
+See [docs/01-Azure-Environment.md](docs/01-Azure-Environment.md) for budget rules.
+
+## Repository Structure
+
+```text
+Azure-Enterprise-Kubernetes-Platform
+|
++-- README.md
++-- LICENSE
++-- CHANGELOG.md
++-- CONTRIBUTING.md
++-- SECURITY.md
++-- docs
+|   +-- 00-Architecture.md
+|   +-- 01-Azure-Environment.md
+|   +-- 02-Networking.md
+|   +-- 03-Active-Directory.md
+|   +-- 04-Hybrid-Identity.md
+|   +-- 05-KeyVault.md
+|   +-- 06-Docker.md
+|   +-- 07-ACR.md
+|   +-- 08-AKS.md
+|   +-- 09-Kubernetes-Workloads.md
+|   +-- 10-Azure-DevOps-CICD.md
+|   +-- 11-Monitoring.md
+|   +-- 12-Troubleshooting.md
+|   +-- images
++-- diagrams
++-- docker
++-- helm
++-- kubernetes
++-- scripts
++-- terraform
+```
+
+## Implementation Roadmap
+
+| Phase | Area | Status |
+|---|---|---|
+| 01 | Azure environment and governance | Ready |
+| 02 | Networking foundation | Ready |
+| 03 | Active Directory lab VM | Ready |
+| 04 | hybrid identity design | Ready |
+| 05 | Key Vault | Ready |
+| 06 | Docker | Ready |
+| 07 | Azure Container Registry | Ready |
+| 08 | AKS | Ready |
+| 09 | Kubernetes workloads | Ready |
+| 10 | Azure DevOps CI/CD | Draft |
+| 11 | Monitoring | Draft |
+| 12 | Troubleshooting | Draft |
+
+## Quick Start
+
+1. Review [docs/00-Architecture.md](docs/00-Architecture.md).
+2. Create the resource groups with [scripts/01-create-resource-groups.ps1](scripts/01-create-resource-groups.ps1).
+3. Build networking with [scripts/02-create-network.ps1](scripts/02-create-network.ps1).
+4. Create ACR with [scripts/04-create-acr.ps1](scripts/04-create-acr.ps1).
+5. Deploy AKS with [scripts/05-create-aks.ps1](scripts/05-create-aks.ps1).
+6. Deploy the starter Kubernetes workload from [kubernetes/nginx](kubernetes/nginx).
+
+## Screenshot Workflow
+
+Store screenshots in `docs/images` using this naming pattern:
+
+```text
+001-resource-groups.png
+002-virtual-network.png
+003-subnets.png
+004-domain-controller.png
+005-key-vault.png
+006-acr.png
+007-aks-cluster.png
+008-kubectl-pods.png
+009-load-balancer-service.png
+```
+
+## Author
+
+Ahmed Mohamed Emam
+
+Senior System Administrator and DevOps Engineer
