@@ -1,0 +1,23 @@
+# Local environment
+.env
+*.local
+*.secret
+
+# Azure and Kubernetes sensitive files
+*.kubeconfig
+kubeconfig*
+azureProfile.json
+accessTokens.json
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+

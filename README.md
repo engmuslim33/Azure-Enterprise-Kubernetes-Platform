@@ -80,7 +80,7 @@ Azure-Enterprise-Kubernetes-Platform
 | 01 | Azure environment and governance | Ready |
 | 02 | Networking foundation | Ready |
 | 03 | Active Directory lab VM | Ready |
-| 04 | hybrid identity design | Ready |
+| 04 | Hybrid identity design | Ready |
 | 05 | Key Vault | Ready |
 | 06 | Docker | Ready |
 | 07 | Azure Container Registry | Ready |
@@ -120,3 +120,4 @@ Store screenshots in `docs/images` using this naming pattern:
 Ahmed Mohamed Emam
 
 Senior System Administrator and DevOps Engineer
+
