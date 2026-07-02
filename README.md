@@ -2,7 +2,25 @@
 
 End-to-end enterprise infrastructure on Microsoft Azure, from identity and networking to AKS, containers, CI/CD, monitoring, and application deployment.
 
+![Azure Enterprise Kubernetes Platform architecture hero](docs/images/architecture-hero.svg)
+
+[![Azure](https://img.shields.io/badge/Azure-Cloud-0078D4)](https://azure.microsoft.com/)
+[![Kubernetes](https://img.shields.io/badge/Kubernetes-AKS-326CE5)](https://kubernetes.io/)
+[![Docker](https://img.shields.io/badge/Docker-Containers-2496ED)](https://www.docker.com/)
+[![Terraform](https://img.shields.io/badge/Terraform-IaC-844FBA)](https://www.terraform.io/)
+[![Status](https://img.shields.io/badge/Status-Active-success)](#implementation-roadmap)
+
 This project is designed as a portfolio-grade Azure lab that can be built on a Free or Student subscription with careful cost control. The documentation starts with manual implementation for learning, then introduces automation with scripts and Terraform.
+
+## Table of Contents
+
+- [Project Goals](#project-goals)
+- [Architecture Scope](#architecture-scope)
+- [Free Subscription Design](#free-subscription-design)
+- [Repository Structure](#repository-structure)
+- [Implementation Roadmap](#implementation-roadmap)
+- [Quick Start](#quick-start)
+- [Screenshot Workflow](#screenshot-workflow)
 
 ## Project Goals
 
@@ -92,12 +110,25 @@ Azure-Enterprise-Kubernetes-Platform
 
 ## Quick Start
 
-1. Review [docs/00-Architecture.md](docs/00-Architecture.md).
-2. Create the resource groups with [scripts/01-create-resource-groups.ps1](scripts/01-create-resource-groups.ps1).
-3. Build networking with [scripts/02-create-network.ps1](scripts/02-create-network.ps1).
-4. Create ACR with [scripts/04-create-acr.ps1](scripts/04-create-acr.ps1).
-5. Deploy AKS with [scripts/05-create-aks.ps1](scripts/05-create-aks.ps1).
-6. Deploy the starter Kubernetes workload from [kubernetes/nginx](kubernetes/nginx).
+Before running commands, sign in and select the correct subscription:
+
+```powershell
+az login
+az account show
+```
+
+Then build the lab in this order:
+
+```powershell
+.\scripts\01-create-resource-groups.ps1 -Location "westeurope"
+.\scripts\02-create-network.ps1 -Location "westeurope"
+.\scripts\03-create-keyvault.ps1 -Location "westeurope" -VaultName "kv-aekp-lab-001"
+.\scripts\04-create-acr.ps1 -Location "westeurope" -RegistryName "acraekplab001"
+.\scripts\05-create-aks.ps1 -Location "westeurope" -AcrName "acraekplab001"
+kubectl apply -f .\kubernetes\nginx
+```
+
+For the full explanation, start with [docs/00-Architecture.md](docs/00-Architecture.md).
 
 ## Screenshot Workflow
 
@@ -115,9 +146,14 @@ Store screenshots in `docs/images` using this naming pattern:
 009-load-balancer-service.png
 ```
 
+The main architecture hero image is stored at:
+
+```text
+docs/images/architecture-hero.svg
+```
+
 ## Author
 
 Ahmed Mohamed Emam
 
 Senior System Administrator and DevOps Engineer
-
