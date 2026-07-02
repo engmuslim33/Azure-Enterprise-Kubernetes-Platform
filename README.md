@@ -154,6 +154,8 @@ docs/images/architecture-hero.svg
 
 ## Author
 
-Ahmed Mohamed Emam
+Eng. Ahmed Mohamed Emam
 
 Senior System Administrator and DevOps Engineer
+
+Horus University in Egypt 
