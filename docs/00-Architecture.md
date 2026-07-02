@@ -4,6 +4,8 @@
 
 Design an enterprise-style Azure platform that can be implemented gradually on a Free or Student subscription.
 
+![Azure Enterprise Kubernetes Platform architecture hero](images/architecture-hero.svg)
+
 ## High-Level Architecture
 
 ```mermaid
