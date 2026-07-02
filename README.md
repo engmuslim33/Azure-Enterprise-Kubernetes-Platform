@@ -152,6 +152,12 @@ The main architecture hero image is stored at:
 docs/images/architecture-hero.svg
 ```
 
+Project screenshots are stored under:
+
+```text
+docs/images/screenshots
+```
+
 ## Author
 
 Eng. Ahmed Mohamed Emam

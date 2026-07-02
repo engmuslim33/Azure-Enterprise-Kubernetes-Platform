@@ -39,3 +39,8 @@ kubectl apply -f .\kubernetes\nginx
 kubectl get svc -n web
 ```
 
+## Lab Screenshot
+
+The following screenshot validates the AKS cluster, Kubernetes service, and Nginx workload access path.
+
+![AKS cluster and Nginx validation](images/screenshots/004-aks-nginx-validation.svg)

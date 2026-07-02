@@ -52,3 +52,8 @@ Get-DnsServerZone
 - Domain created
 - Active Directory Users and Computers
 
+## Lab Screenshot
+
+The following screenshot documents the configured UPN suffix used for the hybrid identity lab.
+
+![Active Directory UPN suffix configuration](images/screenshots/001-active-directory-upn-suffix.svg)

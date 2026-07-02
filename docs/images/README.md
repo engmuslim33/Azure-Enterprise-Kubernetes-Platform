@@ -8,6 +8,15 @@ This directory contains visual assets used by the repository documentation.
 |---|---|
 | `architecture-hero.svg` | README hero image for the Azure Enterprise Kubernetes Platform |
 
+## Lab Screenshots
+
+| Screenshot | Related module |
+|---|---|
+| `screenshots/001-active-directory-upn-suffix.svg` | Active Directory UPN suffix configuration |
+| `screenshots/002-entra-connect-sign-in.svg` | Microsoft Entra Connect sign-in configuration |
+| `screenshots/003-network-security-groups.svg` | Azure Network Security Groups validation |
+| `screenshots/004-aks-nginx-validation.svg` | AKS cluster and Nginx service validation |
+
 ## Screenshot Naming Convention
 
 Use numbered filenames so the documentation remains easy to follow:

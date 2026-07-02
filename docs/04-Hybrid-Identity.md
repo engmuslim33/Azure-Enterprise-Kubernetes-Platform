@@ -41,3 +41,8 @@ Start-ADSyncSyncCycle -PolicyType Delta
 - Entra ID users
 - Synced user source
 
+## Lab Screenshot
+
+The following screenshot shows the Microsoft Entra Connect sign-in configuration phase and UPN suffix validation.
+
+![Microsoft Entra Connect sign-in configuration](images/screenshots/002-entra-connect-sign-in.svg)

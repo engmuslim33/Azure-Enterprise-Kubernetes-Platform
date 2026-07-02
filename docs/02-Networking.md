@@ -47,3 +47,8 @@ az network vnet show `
 - NSG inbound rules
 - Network topology view
 
+## Lab Screenshot
+
+The following screenshot documents Network Security Group validation for the server subnet and VM network interface.
+
+![Azure Network Security Groups validation](images/screenshots/003-network-security-groups.svg)
